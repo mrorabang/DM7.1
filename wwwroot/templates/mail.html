@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Template</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f2f5; margin: 0;">
+
+<div style="
+    width: 340px; 
+    max-height: 600px;
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1), 0 12px 24px rgba(0,0,0,0.2); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+" 
+onmouseover="this.style.transform='scale(1.03)';" 
+onmouseout="this.style.transform='scale(1)';">
+    
+    <!-- Hình ảnh với hiệu ứng overlay gradient -->
+    <div style="position: relative;">
+        <img src="https://media4.giphy.com/media/dZS9HgCrRbgA0imoak/giphy.gif?cid=6c09b9528p01ds5g8ob23xpn86dgtoi2o9lrpgc7iruedivf&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="Card Image" style="width: 100%; height: auto;">
+        <div style="
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 90%; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)); 
+            color: #fff; 
+            display: flex; 
+            align-items: flex-end;
+            padding: 16px;
+            font-size: 1.4em;
+            font-weight: bold;
+        ">
+           {{TITLE}}
+        </div>
+    </div>
+    
+    <!-- Nội dung -->
+    <div style="padding: 20px;">
+        <p style="font-size: 0.95em; color: #333; line-height: 1.6; margin: 0 0 16px;">
+           {{CONTENT}}
+        </p>
+        <a href="#" style="
+            display: block; 
+            text-align: center; 
+            padding: 10px 20px; 
+            color: #fff; 
+            background: linear-gradient(135deg, #6a11cb, #2575fc); 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-weight: bold;
+            transition: background 0.3s ease;
+        " 
+        onmouseover="this.style.background='linear-gradient(135deg, #2575fc, #6a11cb)';" 
+        onmouseout="this.style.background='linear-gradient(135deg, #6a11cb, #2575fc)';">
+            Xem thêm
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
